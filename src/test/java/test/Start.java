@@ -85,7 +85,7 @@ public class Start {
     FtpClientProvider ftpClientProvider = FtpClientProvider.provider();
     FtpClient ftp = ftpClientProvider.createFtpClient();
     ftp.connect(new InetSocketAddress(InetAddress.getByName("94.126.16.19"), 21));
-    ftp = ftp.login("rbp", "qJ4bu_12".toCharArray());
+    ftp = ftp.login("rbp", "".toCharArray());
     ftp.putFile(file.getName(), new FileInputStream(file));
   }
 
