@@ -77,6 +77,8 @@ public class Start {
   }
 
   private static void saveToFile(String localSDP, File file) throws Throwable {
+    file.getParentFile().mkdirs();
+    file.createNewFile();
     FileOutputStream fos = new FileOutputStream(file);
     fos.write(localSDP.getBytes());
   }
